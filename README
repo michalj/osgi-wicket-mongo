@@ -1,0 +1,29 @@
+Database setup
+--------------
+
+Creating database schema:
+
+> sudo -u postgres psql -f create.sql
+> psql -U cityfamebyname -h localhost cityfamebyname -f cityfamebyname.sql 
+
+Taking database snapshot:
+
+> pg_dump -U cityfamebyname -h localhost cityfamebyname > cityfamebyname.sql
+
+Uninstalling database:
+
+> sudo -u postgres psql -f drop.sql
+
+Running locally
+---------------
+
+Deploy the cityfamebyname feature on karaf instance. Continue to update the 'com.cityfamebyname.web' bundle, as you develop.
+
+Point your browser to:
+
+http://localhost:8181/
+
+Accessing live database
+-----------------------
+
+> psql -h localhost -U cityfamebyname cityfamebyname

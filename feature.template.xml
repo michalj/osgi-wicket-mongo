@@ -1,0 +1,23 @@
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
+    <feature name="cityfamebyname" version="VERSION">
+    	<feature>war</feature>
+        <feature>http</feature>
+        <feature>jetty</feature>
+        <feature>spring-aspects</feature>
+        <feature>common-users</feature>
+        <!-- http://team.ops4j.org/wiki/display/paxwicket/Install+Pax+Wicket -->
+        <!-- features:addurl mvn:org.ops4j.pax.wicket/features/2.0.0/xml/features -->
+        <feature version="6.2.0">wicket</feature>
+        <feature>pax-wicket</feature>
+        <feature>pax-wicket-spring</feature>
+        <feature version="3.0.7.RELEASE">spring-jdbc</feature>
+        <feature>spring-dm-web</feature>
+        <bundle>mvn:com.cityfamebyname/web_2.9.2/VERSION</bundle>
+        
+        <bundle>mvn:commons-dbcp/commons-dbcp/1.4</bundle>
+		<bundle>mvn:commons-pool/commons-pool/1.6</bundle>
+		<bundle>mvn:eu.semantiq.common/postgres-osgi/8.4.701.2</bundle>
+		<bundle>mvn:commons-io/commons-io/2.4</bundle>
+		<bundle>mvn:com.weiglewilczek.scala-lang-osgi/scala-library/2.9.1</bundle>
+    </feature>
+</features>
